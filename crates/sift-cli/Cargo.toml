@@ -1,0 +1,25 @@
+[package]
+name = "sift-cli"
+description = "Sift command line interface"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "sift"
+path = "src/main.rs"
+
+[dependencies]
+sift-core.workspace = true
+sift-engine.workspace = true
+sift-fetcher.workspace = true
+sift-api.workspace = true
+anyhow.workspace = true
+clap.workspace = true
+indicatif.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+url.workspace = true

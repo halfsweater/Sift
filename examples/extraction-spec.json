@@ -1,0 +1,9 @@
+{
+  "query": "Get the email, phone number, address and Instagram account of every agency.",
+  "subject": "agency",
+  "fields": ["email", "phone", "address", "instagram"],
+  "deduplicate": true,
+  "validate": true,
+  "keep_invalid": false,
+  "include_source": true
+}

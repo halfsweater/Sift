@@ -1,0 +1,4 @@
+{
+  "urls": ["http://127.0.0.1:8099"],
+  "query": "Get the email, phone number, address and Instagram account of every agency."
+}

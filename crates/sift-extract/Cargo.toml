@@ -1,0 +1,22 @@
+[package]
+name = "sift-extract"
+description = "HTML parsing and field extractors for Sift"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+sift-core.workspace = true
+sift-fetcher.workspace = true
+sift-normalize.workspace = true
+scraper.workspace = true
+regex.workspace = true
+serde_json.workspace = true
+url.workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+
+[[bench]]
+name = "extract"
+harness = false

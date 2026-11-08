@@ -1,0 +1,7 @@
+/target
+Cargo.lock.bak
+*.db
+*.db-journal
+/results*.json
+/results*.csv
+/results*.jsonl

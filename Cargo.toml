@@ -1,0 +1,55 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sift-core",
+    "crates/sift-fetcher",
+    "crates/sift-extract",
+    "crates/sift-normalize",
+    "crates/sift-crawler",
+    "crates/sift-engine",
+    "crates/sift-api",
+    "crates/sift-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/sift-rs/sift"
+
+[workspace.dependencies]
+anyhow = "1"
+axum = "0.8"
+clap = { version = "4", features = ["derive", "env"] }
+csv = "1"
+encoding_rs = "0.8"
+futures = "0.3"
+indicatif = "0.17"
+regex = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip", "deflate", "brotli"] }
+scraper = "0.20"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+texting_robots = "0.2"
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "net", "signal"] }
+tokio-util = "0.7"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+url = { version = "2", features = ["serde"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+criterion = "0.5"
+tower = { version = "0.5", features = ["util"] }
+
+sift-core = { path = "crates/sift-core" }
+sift-fetcher = { path = "crates/sift-fetcher" }
+sift-extract = { path = "crates/sift-extract" }
+sift-normalize = { path = "crates/sift-normalize" }
+sift-crawler = { path = "crates/sift-crawler" }
+sift-engine = { path = "crates/sift-engine" }
+sift-api = { path = "crates/sift-api" }
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = true

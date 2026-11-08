@@ -1,0 +1,6 @@
+{
+  "urls": ["http://127.0.0.1:8099"],
+  "fields": ["company_name", "email", "phone", "address", "socials"],
+  "depth": 2,
+  "max_pages": 15
+}

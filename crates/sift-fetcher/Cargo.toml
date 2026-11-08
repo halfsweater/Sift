@@ -1,0 +1,21 @@
+[package]
+name = "sift-fetcher"
+description = "Polite async HTTP fetching for Sift: robots.txt, rate limiting, retries"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+encoding_rs.workspace = true
+reqwest.workspace = true
+texting_robots.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+tracing.workspace = true
+url.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+axum.workspace = true
+tokio = { workspace = true, features = ["test-util"] }
